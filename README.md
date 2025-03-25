@@ -140,7 +140,7 @@ This workshop introduces key database concepts and provides hands-on practice in
    **[Add ERD Snapshot Here]**
    
  images/erd/addimagetoreadme.PNG  
-> ![example of erd from somewhwere](images/erd/traditional-erd-example.png)
+> ![change the following](images/erd/addimagetoreadme.PNG)
 
 images/erd/one.jpg
 > ![add_image_one.png](images/erd/one.jpg)
