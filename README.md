@@ -203,14 +203,12 @@ Supports categorization and reporting for service improvement.
    
 > ![Customer Support ERD](images/erd/CustomerSupportERD.png)
 
-images/erd/one.jpg
-> ![add_image_one.png](images/erd/one.jpg)
-
   
    *(Upload or link to the ERD image or file)*
 
 3. **Creating Tables**:
 ```sql
+-- create table Customer
 CREATE TABLE customer (
   customerID SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
