@@ -203,6 +203,10 @@ Supports categorization and reporting for service improvement.
    
 > ![Customer Support ERD](images/erd/CustomerSupportERD.png)
 
+## 📄 SQL Setup
+
+You can view the full SQL script [createtables](code/sql/createtable.sql).
+
   
    *(Upload or link to the ERD image or file)*
 
