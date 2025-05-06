@@ -210,8 +210,7 @@ images/erd/one.jpg
    *(Upload or link to the ERD image or file)*
 
 3. **Creating Tables**:
-   ```sql
-
+```sql
 CREATE TABLE customer (
   customerID SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
