@@ -137,7 +137,68 @@ This workshop introduces key database concepts and provides hands-on practice in
    - Designed an ERD to model relationships and entities for the database structure.
    - Focused on normalizing the database and ensuring scalability.
 
-   **[Add ERD Snapshot Here]**
+  📘 Database Schema – Customer Support Unit
+This schema supports the core operations of the Customer Support Unit within the organization. It is designed to manage customer interactions, track service requests and complaints, and gather feedback to improve support services.
+
+🧾 customer
+Stores information about customers who interact with the support team.
+
+Fields: customerID, name, address, phoneNum
+
+Purpose: Identifies each customer and links them to complaints, feedback, or service requests.
+
+🧑‍💼 employee
+Represents support staff handling customer issues.
+
+Fields: employeeID
+
+Purpose: Tracks employees assigned to manage specific complaints or related items.
+
+🗂️ category
+Defines categories of issues (e.g., technical, billing, product-related).
+
+Fields: categoryID, type
+
+Purpose: Helps classify complaints and feedback for organization and analysis.
+
+📄 complaint
+Logs official complaints submitted by customers.
+
+Fields: complaintID, complaintDate, customerID, employeeID, categoryID
+
+Purpose: Tracks which customer submitted the complaint, when, and who handled it.
+
+📦 item
+Represents items or products related to customer requests.
+
+Fields: itemID, description, employeeID
+
+Purpose: Connects service requests to specific products and the employees managing them.
+
+📑 request
+Captures customer service requests (e.g., returns, repairs, inquiries).
+
+Fields: requestID, requestDate, itemID, customerID
+
+Purpose: Tracks requests from customers and links them to items and customers.
+
+💬 feedback
+Stores general customer feedback.
+
+Fields: feedbackID, feedbackDate, customerID, categoryID
+
+Purpose: Collects customer opinions and suggestions to improve service quality.
+
+🧠 Summary
+This schema ensures organized, efficient handling of customer support processes:
+
+Maintains relationships between customers, employees, and services.
+
+Differentiates between complaints, feedback, and service requests.
+
+Supports categorization and reporting for service improvement.
+
+
    
    
 > ![Customer Support ERD](images/erd/CustomerSupportERD.png)
