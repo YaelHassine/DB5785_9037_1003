@@ -137,13 +137,13 @@ This workshop introduces key database concepts and provides hands-on practice in
    - Designed an ERD to model relationships and entities for the database structure.
    - Focused on normalizing the database and ensuring scalability.
 
-  📘 Database Schema – Customer Support Unit
+ ## 📘 Database Schema – Customer Support Unit
 This schema supports the core operations of the Customer Support Unit within the organization. It is designed to manage customer interactions, track service requests and complaints, and gather feedback to improve support services.
 
-🧾 customer
+### 🧾 customer
 Stores information about customers who interact with the support team.
 
-Fields: customerID, name, address, phoneNum
+- **Fields:** customerID, name, address, phoneNum
 
 Purpose: Identifies each customer and links them to complaints, feedback, or service requests.
 
@@ -210,11 +210,70 @@ images/erd/one.jpg
    *(Upload or link to the ERD image or file)*
 
 3. **Creating Tables**:
-   - Translated the ERD into actual tables, defining columns, data types, primary keys, and foreign keys.
-   - Utilized SQL commands for table creation.
+   ```sql
+   
+   -- CUSTOMER TABLE
+CREATE TABLE customer (
+  customerID SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  phoneNum VARCHAR(20) NOT NULL
+);
 
-   **[Add Table Creation Code Here]**
-   *(Provide or link to the SQL code used to create the tables)*
+-- EMPLOYEE TABLE
+CREATE TABLE employee (
+  employeeID SERIAL PRIMARY KEY
+);
+
+-- CATEGORY TABLE
+CREATE TABLE category (
+  categoryID SERIAL PRIMARY KEY,
+  type VARCHAR(50) NOT NULL
+);
+
+-- COMPLAINT TABLE
+CREATE TABLE complaint (
+  complaintID SERIAL PRIMARY KEY,
+  complaintDate DATE NOT NULL,
+  customerID INT NOT NULL,
+  employeeID INT NOT NULL,
+  categoryID INT NOT NULL,
+  FOREIGN KEY (customerID) REFERENCES customer(customerID),
+  FOREIGN KEY (employeeID) REFERENCES employee(employeeID),
+  FOREIGN KEY (categoryID) REFERENCES category(categoryID)
+);
+
+-- ITEM TABLE
+CREATE TABLE item (
+  itemID SERIAL PRIMARY KEY,
+  description TEXT NOT NULL,
+  employeeID INT NOT NULL,
+  FOREIGN KEY (employeeID) REFERENCES employee(employeeID)
+);
+
+-- REQUEST TABLE
+CREATE TABLE request (
+  requestID SERIAL PRIMARY KEY,
+  requestDate DATE NOT NULL,
+  itemID INT NOT NULL,
+  customerID INT NOT NULL,
+  FOREIGN KEY (itemID) REFERENCES item(itemID),
+  FOREIGN KEY (customerID) REFERENCES customer(customerID)
+);
+
+-- FEEDBACK TABLE
+CREATE TABLE feedback (
+  feedbackID SERIAL PRIMARY KEY,
+  feedbackDate DATE NOT NULL,
+  customerID INT NOT NULL,
+  categoryID INT NOT NULL,
+  FOREIGN KEY (customerID) REFERENCES customer(customerID),
+  FOREIGN KEY (categoryID) REFERENCES category(categoryID)
+);
+
+   ```
+
+  
 
 4. **Generating Sample Data**:
    - Generated sample data to simulate real-world scenarios using **SQL Insert Statements**.
