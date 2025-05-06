@@ -211,7 +211,6 @@ images/erd/one.jpg
 
 3. **Creating Tables**:
    ```sql
-   
    -- CUSTOMER TABLE
 CREATE TABLE customer (
   customerID SERIAL PRIMARY KEY,
