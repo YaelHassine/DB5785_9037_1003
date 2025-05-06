@@ -12,7 +12,7 @@ This workshop introduces key database concepts and provides hands-on practice in
    - Focused on normalizing the database and ensuring scalability.
 
  ## 📘 Database Schema – Customer Support Unit
-This schema supports the core operations of the Customer Support Unit within the organization. It is designed to manage customer interactions, track service requests and complaints, and gather feedback to improve support services.
+This schema supports the core operations of the Customer Support Unit within the Bus Company. It is designed to manage customer interactions, track service requests and complaints, and gather feedback to improve support services.
 
 ### 🧾 customer
 Stores information about customers who interact with the support team.
