@@ -19,49 +19,49 @@ Stores information about customers who interact with the support team.
 
 - **Fields:** <ins>customerID</ins>, name, address, phoneNum
 
-Purpose: Identifies each customer and links them to complaints, feedback, or service requests.
+**Purpose:** Identifies each customer and links them to complaints, feedback, or service requests.
 
 🧑‍💼 employee
 Represents support staff handling customer issues.
 
-Fields: employeeID
+- **Fields:** employeeID
 
-Purpose: Tracks employees assigned to manage specific complaints or related items.
+-- **Purpose:** Tracks employees assigned to manage specific complaints or related items.
 
 🗂️ category
 Defines categories of issues (e.g., technical, billing, product-related).
 
-Fields: categoryID, type
+- **Fields:** categoryID, type
 
-Purpose: Helps classify complaints and feedback for organization and analysis.
+-- **Purpose:** Helps classify complaints and feedback for organization and analysis.
 
 📄 complaint
 Logs official complaints submitted by customers.
 
-Fields: complaintID, complaintDate, customerID, employeeID, categoryID
+- **Fields:** complaintID, complaintDate, customerID, employeeID, categoryID
 
-Purpose: Tracks which customer submitted the complaint, when, and who handled it.
+-- **Purpose:** Tracks which customer submitted the complaint, when, and who handled it.
 
 📦 item
 Represents items or products related to customer requests.
 
-Fields: itemID, description, employeeID(FK)
+- **Fields:** itemID, description, employeeID(FK)
 
-Purpose: Connects service requests to specific products and the employees managing them.
+-- **Purpose:** Connects service requests to specific products and the employees managing them.
 
 📑 request
 Captures customer service requests (e.g., returns, repairs, inquiries).
 
-Fields: requestID, requestDate, itemID, customerID
+- **Fields:** requestID, requestDate, itemID, customerID
 
-Purpose: Tracks requests from customers and links them to items and customers.
+-- **Purpose:** Tracks requests from customers and links them to items and customers.
 
 💬 feedback
 Stores general customer feedback.
 
-Fields: feedbackID, feedbackDate, customerID, categoryID
+- **Fields:** feedbackID, feedbackDate, customerID, categoryID
 
-Purpose: Collects customer opinions and suggestions to improve service quality.
+-- **Purpose:** Collects customer opinions and suggestions to improve service quality.
 
 🧠 Summary
 This schema ensures organized, efficient handling of customer support processes:
