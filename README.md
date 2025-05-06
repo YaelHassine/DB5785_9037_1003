@@ -211,7 +211,7 @@ images/erd/one.jpg
 
 3. **Creating Tables**:
    ```sql
-   -- CUSTOMER TABLE
+
 CREATE TABLE customer (
   customerID SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
@@ -219,18 +219,18 @@ CREATE TABLE customer (
   phoneNum VARCHAR(20) NOT NULL
 );
 
--- EMPLOYEE TABLE
+
 CREATE TABLE employee (
   employeeID SERIAL PRIMARY KEY
 );
 
--- CATEGORY TABLE
+
 CREATE TABLE category (
   categoryID SERIAL PRIMARY KEY,
   type VARCHAR(50) NOT NULL
 );
 
--- COMPLAINT TABLE
+
 CREATE TABLE complaint (
   complaintID SERIAL PRIMARY KEY,
   complaintDate DATE NOT NULL,
@@ -242,7 +242,7 @@ CREATE TABLE complaint (
   FOREIGN KEY (categoryID) REFERENCES category(categoryID)
 );
 
--- ITEM TABLE
+
 CREATE TABLE item (
   itemID SERIAL PRIMARY KEY,
   description TEXT NOT NULL,
@@ -250,7 +250,7 @@ CREATE TABLE item (
   FOREIGN KEY (employeeID) REFERENCES employee(employeeID)
 );
 
--- REQUEST TABLE
+
 CREATE TABLE request (
   requestID SERIAL PRIMARY KEY,
   requestDate DATE NOT NULL,
@@ -260,7 +260,6 @@ CREATE TABLE request (
   FOREIGN KEY (customerID) REFERENCES customer(customerID)
 );
 
--- FEEDBACK TABLE
 CREATE TABLE feedback (
   feedbackID SERIAL PRIMARY KEY,
   feedbackDate DATE NOT NULL,
@@ -269,40 +268,39 @@ CREATE TABLE feedback (
   FOREIGN KEY (customerID) REFERENCES customer(customerID),
   FOREIGN KEY (categoryID) REFERENCES category(categoryID)
 );
-
-   ```
+```
 
   
 
-4. **Generating Sample Data**:
+5. **Generating Sample Data**:
    - Generated sample data to simulate real-world scenarios using **SQL Insert Statements**.
    - Used scripts to automate bulk data insertion for large datasets.
 
    **[Add Sample Data Insert Script Here]**
    *(Upload or link to the sample data insert scripts)*
 
-5. **Writing SQL Queries**:
+6. **Writing SQL Queries**:
    - Practiced writing **SELECT**, **JOIN**, **GROUP BY**, and **ORDER BY** queries.
    - Learned best practices for querying data efficiently, including indexing and optimization techniques.
 
    **[Add Example SQL Query Here]**
    *(Provide or link to example SQL queries)*
 
-6. **Stored Procedures and Functions**:
+7. **Stored Procedures and Functions**:
    - Created reusable **stored procedures** and **functions** to handle common database tasks.
    - Used SQL to manage repetitive operations and improve performance.
 
    **[Add Stored Procedures/Function Code Here]**
    *(Upload or link to SQL code for stored procedures and functions)*
 
-7. **Views**:
+8. **Views**:
    - Created **views** to simplify complex queries and provide data abstraction.
    - Focused on security by limiting user access to certain columns or rows.
 
    **[Add View Code Here]**
    *(Provide or link to the SQL code for views)*
 
-8. **PostgreSQL with Docker**:
+9. **PostgreSQL with Docker**:
    - Set up a Docker container to run **PostgreSQL**.
    - Configured database connections and managed data persistence within the containerized environment.
 
