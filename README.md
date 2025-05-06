@@ -139,8 +139,8 @@ This workshop introduces key database concepts and provides hands-on practice in
 
    **[Add ERD Snapshot Here]**
    
- images/erd/addimagetoreadme.PNG  
-> ![change the following](images/erd/addimagetoreadme.PNG)
+   
+> ![Customer Support ERD](images/erd/CustomerSupportERD.png)
 
 images/erd/one.jpg
 > ![add_image_one.png](images/erd/one.jpg)
