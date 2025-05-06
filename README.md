@@ -17,7 +17,7 @@ This schema supports the core operations of the Customer Support Unit within the
 ### 🧾 customer
 Stores information about customers who interact with the support team.
 
-- **Fields:** <u>customerID</u>, name, address, phoneNum
+- **Fields:** _customerID_, name, address, phoneNum
 
 Purpose: Identifies each customer and links them to complaints, feedback, or service requests.
 
