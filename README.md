@@ -19,14 +19,14 @@ Stores information about customers who interact with the support team.
 
 - **Fields:** <ins>customerID</ins>, name, address, phoneNum
 
-- - **Purpose:** Identifies each customer and links them to complaints, feedback, or service requests.
+-- **Purpose:** Identifies each customer and links them to complaints, feedback, or service requests.
 
 🧑‍💼 employee
 Represents support staff handling customer issues.
 
 - **Fields:** employeeID
 
-- - **Purpose:** Tracks employees assigned to manage specific complaints or related items.
+-- **Purpose:** Tracks employees assigned to manage specific complaints or related items.
 
 🗂️ category
 Defines categories of issues (e.g., technical, billing, product-related).
