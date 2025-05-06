@@ -208,7 +208,7 @@ Supports categorization and reporting for service improvement.
 
 3. **Creating Tables**:
 ```sql
--- create table Customer
+-- CUSTOMER TABLE
 CREATE TABLE customer (
   customerID SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
@@ -216,18 +216,18 @@ CREATE TABLE customer (
   phoneNum VARCHAR(20) NOT NULL
 );
 
-
+-- EMPLOYEE TABLE
 CREATE TABLE employee (
   employeeID SERIAL PRIMARY KEY
 );
 
-
+-- CATEGORY TABLE
 CREATE TABLE category (
   categoryID SERIAL PRIMARY KEY,
   type VARCHAR(50) NOT NULL
 );
 
-
+-- COMPLAINT TABLE
 CREATE TABLE complaint (
   complaintID SERIAL PRIMARY KEY,
   complaintDate DATE NOT NULL,
@@ -239,7 +239,7 @@ CREATE TABLE complaint (
   FOREIGN KEY (categoryID) REFERENCES category(categoryID)
 );
 
-
+-- ITEM TABLE
 CREATE TABLE item (
   itemID SERIAL PRIMARY KEY,
   description TEXT NOT NULL,
@@ -247,7 +247,7 @@ CREATE TABLE item (
   FOREIGN KEY (employeeID) REFERENCES employee(employeeID)
 );
 
-
+-- REQUEST TABLE
 CREATE TABLE request (
   requestID SERIAL PRIMARY KEY,
   requestDate DATE NOT NULL,
@@ -257,6 +257,7 @@ CREATE TABLE request (
   FOREIGN KEY (customerID) REFERENCES customer(customerID)
 );
 
+-- FEEDBACK TABLE
 CREATE TABLE feedback (
   feedbackID SERIAL PRIMARY KEY,
   feedbackDate DATE NOT NULL,
@@ -265,6 +266,7 @@ CREATE TABLE feedback (
   FOREIGN KEY (customerID) REFERENCES customer(customerID),
   FOREIGN KEY (categoryID) REFERENCES category(categoryID)
 );
+
 ```
 
   
