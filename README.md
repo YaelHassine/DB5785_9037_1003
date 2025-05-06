@@ -19,7 +19,7 @@ Stores information about customers who interact with the support team.
 
 - **Fields:** <ins>customerID</ins>, name, address, phoneNum
 
--- **Purpose:** Identifies each customer and links them to complaints, feedback, or service requests.
+ ``` **Purpose:** Identifies each customer and links them to complaints, feedback, or service requests.
 
 🧑‍💼 employee
 Represents support staff handling customer issues.
